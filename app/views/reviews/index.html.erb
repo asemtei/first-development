@@ -1,0 +1,33 @@
+<header id="content-header">
+  <h1>Reviews for <%= link_to(@movie.title, @movie) %></h1>
+</header>
+<h3>Average Review</h3>
+<p>
+  <%= format_average_stars(@movie) %>
+</p>
+  <%= link_to "Write Review", 
+  new_movie_review_path(@movie), 
+  class: 'button ok review' %>
+<br>
+<ol id="reviews">
+  <% @reviews.each do |review| %>
+    <li>
+      <span class="review">
+      	<%= image_tag(review.stars.to_s + '_stars.png') %></span>
+      <span class="user">by <%= review.name %></span>
+      
+      <%= link_to edit_review_image,
+      [:edit, @movie, review]  %>
+      
+      <%= link_to delete_review_image, [@movie, review],
+        id: "#{dom_id(review)}_delete",
+        method: :delete, 
+        data: { confirm: 'Are you sure?' } %>
+
+      <span class="date"><%= time_ago_in_words(review.created_at) %> ago</span>
+      <p>
+        &quot;<%= review.comment %>&quot;
+      </p>
+    </li>
+  <% end %>
+</ol>
