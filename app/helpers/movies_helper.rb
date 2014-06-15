@@ -7,11 +7,13 @@ module MoviesHelper
    end
  end
  
+
+
  def image_for(movie)
    if movie.image_file_name.blank?
      image_tag('placeholder.png')
    else
-     image_tag(movie.image_file_name)
+     link_to image_tag(movie.image_file_name.thumb.url)
    end
  end
 
@@ -30,5 +32,8 @@ end
  def delete_review_image
    image_tag('trash.png', style: 'border: 0', :title => 'Delete Review')
  end
+
+
+          
 
 end

@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
+mount_uploader :image_file_name, ImageUploader
 
 validates :title, :released_on, :duration, presence: true
 validates :description, length: { minimum: 25 }
@@ -7,13 +8,8 @@ validates :total_gross, numericality: { greater_than_or_equal_to: 0 }
 #   with:    /\w+.(gif|jpg|png)\z/i,
 #   message: "must reference a GIF, JPG, or PNG image"
 # }
-
-mount_uploader :image_file_name, ImageUploader
-
 RATINGS = %w(G PG PG-13 R NC-17 AO)
-
 validates :rating, inclusion: { in: RATINGS }
-
 has_many :reviews, dependent: :destroy
 
   def self.released
@@ -44,4 +40,7 @@ has_many :reviews, dependent: :destroy
     reviews.order("created_at desc")
   end
 
+ 
+
 end
+

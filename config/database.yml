@@ -20,7 +20,7 @@ development:
   database: myapp_development
   pool: 5
   username: postgres 
-  password: password
+  password: 19873759
   template: template0
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -50,7 +50,7 @@ test:
   database: myapp_test
   pool: 5
   username: postgres
-  password: password
+  password: 19873759
   host: localhost
   template: template0
 
@@ -61,5 +61,5 @@ production:
   pool: 5
   username: postgres
   host: localhost
-  password: password
+  password: 19873759
   template: template0
