@@ -4,12 +4,23 @@
       <li class="all-movies">
         <%= link_to 'All Movies', movies_path, class: 'button' %>
       </li>
+  <% if logged_admin? %>
       <li class="create-movie">
         <%= link_to 'Add New Movie', new_movie_path, class: 'button' %>
       </li>
+  <% else %>
+  <% end %>
+  <% if current_user %>
+  <% else %>
       <li class="sign-up">
         <%= link_to 'Sign Up', signup_path, class: 'button' %>
       </li>
+      <li class="sign-in">
+        <%= link_to 'Sign in', signin_path, class: 'button' %>
+      </li>
+
+  <% end %>
+
     </ul>
   </nav>
 </aside>

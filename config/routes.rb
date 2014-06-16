@@ -1,6 +1,10 @@
 Flix::Application.routes.draw do
 
-	get 'signup' => 'users#new'
+resource :session
+
+get 'signup' => 'users#new'
+get "signin" => "sessions#new"
+
   resources :users
 
   root "movies#index"

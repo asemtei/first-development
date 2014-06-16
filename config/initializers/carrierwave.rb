@@ -6,5 +6,5 @@ CarrierWave.configure do |config|
     :region                 => 'us-west-2',                 	
         :path_style => true
   }
-  config.fog_directory  = ENV['AWS_BUCKET'] #'flix.akiro'                
+  config.fog_directory  = ENV['AWS_BUCKET']                
 end

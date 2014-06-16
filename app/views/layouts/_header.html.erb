@@ -1,6 +1,16 @@
 <header id="page-header">
-  <div id="masthead">
-    <h1><%= link_to 'Akiro\'s Favorite FLIX', root_path %></h1>
-  </div>
+	<div id="mastheads">
+		<h1><%= link_to 'Akiro Fabulous Flixs', root_path %></h1>
+	</div>
+	<div id="masthead2">
+	<nav>
+	    <% if current_user %>
+	    	<strong>	<%=  link_to(current_user.name.upcase, current_user ) %>  &nbsp;</strong>
+	    		    	<%= link_to 'Sign Out', session_path, method: :delete, 
+	    				class: 'button ok review' %>
 
+	    <% end %>
+	</nav>
+	</div> 
 </header>
+

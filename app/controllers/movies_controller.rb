@@ -1,4 +1,7 @@
 class MoviesController < ApplicationController
+before_action :require_signin, except: [:show, :index]
+before_action :require_admin, except: [:show, :index]
+
   def index
     @movies = Movie.released
     @image = ImageUploader.new
@@ -47,5 +50,7 @@ private
     params.require(:movie).permit(:title, :description, :rating, :released_on, 
                                   :total_gross, :cast, :director, :duration, :image_file_name)
   end
+
+
 end
 

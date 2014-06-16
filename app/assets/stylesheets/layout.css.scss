@@ -7,60 +7,80 @@ body {
 }
 
 header#page-header {
-  background-color: $secondary-background-color;
-  padding: 25px 25px;
+                              background-color: $secondary-background-color;
+                              padding: 0px 5px 100px 90px;
 
-  h1 a {
-    height: 0px;
-    padding-top: 35px;
-    display: block;
-    font-family: "Esteban", sans-serif;
-    color: #fff;
-    text-decoration: none;
-    overflow: hidden;
-    background: image-url("logo.png") 0 0 no-repeat;
-  }
 
-  a.button {
-    margin-left: 10px;
-    border-color: $subdued-color;
-    &:hover {
-      background-color: #000;
-      color: #fff;
-      border-color: #000;
-      text-decoration: none;
-    }
-  }
 
-  div#masthead {
-    margin: 0 auto;
-    width: 960px;
-    position: relative;
-    text-shadow: #000 0 0 2px;
+                              h1 a {
+                                position: relative;
+                                background: image-url("logo.png") 50px 5px no-repeat;
+                                height: 40px;
+                                padding-left: 50px;
+                                padding-top: 0px;
+                                display: block;
+                                font-family: "Esteban", sans-serif;
+                                color: #fff;
+                                text-decoration: none;
+                                overflow: hidden;
 
-    h1 {
-      margin: 0;
-      color: #fff;
-      line-height: 60px;
-    }
+                              }
 
-    nav {
-      margin: 0;
-      position: absolute;
-      color: $subdued-color;
-      top: 0;
-      right: 0;
-      height: 60px;
-      a {
-        color: $secondary-link-color;
-        text-decoration: none;
+                              div#masthead2 {
+                                width: 250px;
+                                text-shadow: #000 0 0 20px;
 
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
+                                nav {
+
+                                  position: absolute;
+                                  color: $subdued-color;
+                                  padding-top: 33px;
+                                  padding-right: 250px;
+                                  font-size:28px;
+
+                                  right: 90px;
+                                  height: 60px;
+                                  font-family: "Esteban", sans-serif;
+                                  a {
+                                    color: $secondary-link-color;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                      text-shadow: 5px 5px 10px white;
+                                    }
+                                  }
+                                }
+                              }
+
+
+                              div#mastheads {
+                                width: 575px;
+                                position: absolute;
+                                text-shadow: #000 0 0 20px;
+
+                                h1 {
+                                  color: #fff;
+                                  line-height: 140px;
+
+                                }
+
+                                nav {
+                                  margin: 0;
+                                  position: absolute;
+                                  color: $subdued-color;
+                                  top: 0;
+                                  right: 0;
+                                  height: 60px;
+                                  a {
+                                    color: $secondary-link-color;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                      text-decoration: underline;
+                                    }
+                                  }
+                                }
+                              }
 }
 
 footer#page-footer {
@@ -102,15 +122,8 @@ div#wrapper {
 }
 
 aside#sidebar {
-  width: 200px;
+  width: 175px;
   float: right;
-
-  h1 {
-    color: $secondary-text-color;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
 
   a,
   a:link,
@@ -120,30 +133,38 @@ aside#sidebar {
 
   nav {
     ul {
-      margin: 0;
-      padding: 0;
+      position: fixed;
+      margin: 4px;
+      padding: 4px;
       list-style: none;
 
       li {
-        padding: 4px 0;
+        padding: 7px 20px;
         padding-left: 25px;
 
         &.all-movies a {
           display: block;
           background: image-url("arrow.png") no-repeat 10px 8px;
-          padding-left: 35px;
+          padding-left: 40px;
         }
 
         &.create-movie a {
           display: block;
           background: image-url("add.png") no-repeat 10px 8px;
-          padding-left: 35px;
+          padding-left: 30px;
+          padding-right: 30px;
         }
 
         &.sign-up a {
           display: block;
           background: image-url("signup.png") no-repeat 10px 8px;
-          padding-left: 35px;
+          padding-left: 54px;
+        }
+
+        &.sign-in a {
+          display: block;
+          background: image-url("signin.jpg") no-repeat 10px 8px;
+          padding-left: 54px;
         }
 
         a:hover {
