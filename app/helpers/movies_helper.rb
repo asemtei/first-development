@@ -13,7 +13,7 @@ module MoviesHelper
    if movie.image_file_name.blank?
      image_tag('placeholder.png')
    else
-     link_to image_tag(movie.image_file_name.thumb.url)
+     link_to image_tag(movie.image_file_name.thumb.url), movie
    end
  end
 
